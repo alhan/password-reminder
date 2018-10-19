@@ -3,7 +3,7 @@
 	header('Cache-Control: no-store, no-cache, must-revalidate');
 	header('Cache-Control: post-check=0, pre-check=0', FALSE);
 	header('Pragma: no-cache');
-  $srcBase = "/src";
+  $srcBase = "./src/jquery";
   
 	if( !isset($_REQUEST["activation"]) )  $activationToken = "";
 	else $activationToken = $_REQUEST["activation"];
@@ -15,13 +15,13 @@
 	<title>Hatırla</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="<?=$srcBase?>/jquery-ui/jquery-ui.min.css" />
-	<link rel="stylesheet" href="<?=$srcBase?>/jquery.mobile/themes/custom.min.css" />
-	<link rel="stylesheet" href="<?=$srcBase?>/jquery.mobile/themes/jquery.mobile.icons.min.css" />
-	<link rel="stylesheet" href="<?=$srcBase?>/jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
+	<link rel="stylesheet" href="<?=$srcBase?>/ui/jquery-ui.min.css" />
+	<link rel="stylesheet" href="<?=$srcBase?>/mobile/themes/custom.min.css" />
+	<link rel="stylesheet" href="<?=$srcBase?>/mobile/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="<?=$srcBase?>/mobile/jquery.mobile.structure-1.4.5.min.css">
 	<script src="<?=$srcBase?>/jquery-2.2.0.min.js"></script>
-	<script src="<?=$srcBase?>/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
-	<script src="<?=$srcBase?>/jquery-ui/jquery-ui.min.js"></script>
+	<script src="<?=$srcBase?>/mobile/jquery.mobile-1.4.5.min.js"></script>
+	<script src="<?=$srcBase?>/ui/jquery-ui.min.js"></script>
 	<link href="./src/index.css?v=<?=rand(100,10000)?>" rel="stylesheet" />
 	<script src="./src/index.js?v=<?=rand(100,10000)?>"></script>
 </head>
