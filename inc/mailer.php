@@ -1,7 +1,7 @@
 <?
 	require_once '../../../vendor/autoload.php';
-	$transport = (new Swift_SmtpTransport('services.pixel-ware.com', 587))
-		->setUsername('info@pixel-ware.com')
-		->setPassword('D}u8cXjWRQQlJU&T');
+	$transport = (new Swift_SmtpTransport('mail.serverhostname.com', 587))
+		->setUsername('info@domain.com')
+		->setPassword('QQlJUT');
 	$mailer = new Swift_Mailer($transport);
 ?>
