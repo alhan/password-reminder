@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&subset=latin-ext');
+body, input, select, textarea, button, .ui-btn{
+	font-family: 'Roboto', sans-serif;
+	line-height: normal;
+}
+header.ui-header .ui-title{
+	font-size: 2em;
+	margin: 0 10%;
+	padding: 0.4em 0;
+}
+footer{
+	justify-content: center;
+	display: flex;
+}
+
+#list-add-info{
+	text-align:left;
+	font-weight: normal;
+}
+.list-add-input.ui-input-text.ui-input-has-clear a.ui-btn.ui-input-clear{
+	margin: -20px -0.4em 0;
+}
+.list-item-edit-holder .list-add-input{
+	padding: 0;
+	margin: 0em 1em 0.5em 0;
+}
+.list-add-input{
+	padding: 0.2em 0.5em;
+	margin: 0.5em 0;
+}
+.list-item-edit-holder{
+	border-top: 1px solid #00659173;
+	padding: 0.7em 0 2em;
+	width: 100%;
+	column-count: 2;
+	column-gap: 0px;
+	display:none;
+	
+}
+.list-item-edit-holder a.ui-btn{
+	margin: 0.2em 0.5em 0.5em 0;
+}
+.list-add-item-holder{
+	column-count: 2;
+}
+.list-item{
+}
+.list-item-name{
+	font-weight: bold;
+	font-size: 1.2em;
+	align-self: center;
+	border-right: 1px solid #678;
+	padding-right: 0.5em;
+	margin-right: 0.5em;
+}
+.list-item-username{
+	font-weight: normal;
+	font-size: 0.9em;
+	align-self: center;
+}
+.list-item-password{
+	font-weight: 400;
+	font-size: 1.2em;
+	margin: 0 0 0 0.6em;
+	border-left: 1px solid #678;
+	padding: 0.2em 0.2em 0.2em 0.5em;
+	letter-spacing: 1px;
+	color: #006591;
+}
+.ui-btn{
+	/*margin: 0 0.2em;*/
+}
+.ui-listview>.ui-li-static {
+	padding: 0.5em 1em;
+}
+.item-toolbar-holder{
+	display: flex;
+	flex-wrap: wrap;
+}
+.item-toolbar-holder a{
+	
+}
+.list-item-content{
+	display:flex;
+	flex-grow: 1;
+	align-self: center;
+}
+.ui-content{
+	width: 90%;
+	margin: 0 auto;
+	min-width:200px;
+	max-width:700px;
+	padding: 0.5em 0;
+}
+#list-logout-button{
+	background-color: transparent;
+	font-size: 1.4em;
+	width: 0px;
+	padding: 0.85em;
+	top: 0.5em;
+	right: 0.6em;
+	border: none;
+}
+#form-loginSIL{
+	width: 50%;
+	margin: 0 auto;
+	min-width:400px
+}
+.form-line{
+	display: flex;
+}
+.form-line label{
+	display: block;
+	padding: 0.5em;
+	width: 80px;
+	font-size: 1.3em;
+}
+.form-line .ui-input-text{
+	width: 100%;
+}
+
+.hided{
+	display: none;
+}
