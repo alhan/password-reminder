@@ -3,6 +3,8 @@
 	else $email = $_POST["email"];
 	if( !isset($_POST["pass"]) ) die("error");
 	else $pass = $_POST["pass"];
+	if( !isset($_POST["token"]) ) die("error");
+	else $activationToken = $_POST["token"];
 	if( !isset($_POST["expire"]) ) $expire = 3600;
 	else $expire = intval($_POST["expire"]);
 	
@@ -18,14 +20,15 @@
 	$contentArr = explode("\r\n", $content);
 	$isRegisterArr = explode("|", $contentArr[0]);
 	
-	if($isRegisterArr[0]=="unregistered"){
-		die("Please Activation");
+	if($isRegisterArr[1]==$activationToken){
+		file_put_contents($path, "");
+		$encrypted = openssl_encrypt($userInfo, 'BF-ECB', ENCRYPTION_KEY); 
+		
+		$c = setcookie("Token", $encrypted, time()+$expire,"/pssrmndr/");
+		
+		die($encrypted);
+		
+	} else {
+		die("Activation Error:".$isRegisterArr[1].":".$activationToken);
 	}
-	
-	$encrypted = openssl_encrypt($userInfo, 'BF-ECB', ENCRYPTION_KEY); 
-	
-	$c = setcookie("Token", $encrypted, time()+$expire,"/pssrmndr/");
-	
-	die($encrypted);
-	
 ?>

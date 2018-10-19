@@ -25,7 +25,7 @@ $(document).ready(function(){
 						console.log("logedin");
 						location.href="#list";
 					}else{
-						alert("login error");
+						alert(data);
 						console.log( getCookie("Token") );
 						//console.log( decodeURIComponent(getCookie("Token") ));
 					}
@@ -49,6 +49,32 @@ $(document).ready(function(){
 				},
 				function(data){
 					alert(data);
+				},
+				"text"
+			);
+			
+			return false;	
+		});
+		$("#button-activation").click(function(e){
+			var email = $("#input-act-email").val();
+			var pass = $("#input-act-pass").val();
+			var token = $("#input-act-token").val();
+			
+			$.post( "./Rest/activation.php", {
+					email:email,
+					pass:pass,
+					token:token,
+					expire: "86000"
+				},
+				function(data){
+					console.log(decodeURIComponent(data));
+					if( decodeURIComponent(getCookie("Token")) == data ){
+						console.log("logedin");
+						location.href="#list";
+					}else{
+						alert(data);
+						console.log( getCookie("Token") );
+					}
 				},
 				"text"
 			);

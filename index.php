@@ -4,6 +4,9 @@
 	header('Cache-Control: post-check=0, pre-check=0', FALSE);
 	header('Pragma: no-cache');
   $srcBase = "/src";
+  
+	if( !isset($_REQUEST["activation"]) )  $activationToken = "";
+	else $activationToken = $_REQUEST["activation"];
 ?>
 
 <!doctype html>
@@ -41,12 +44,38 @@
 				</form>
 			</div><!-- /content -->
 			<footer data-role="footer">
-					<a href="mailto:alhanozdemir@gmail.com" data-mini="true">alhanozdemir@gmail.com</a>
+					<a href="mailto:alhanozdemir@gmail.com" data-mini="true">contact me</a>
 					<a href="#register" data-mini="true">Kayıt Olun</a>
 			</footer><!-- /footer -->
 	
 	</div>
-    
+  
+	<div data-role="page" id="activation" class="page">
+			<header data-role="header">
+					<h1>Yeni Kullanıcı Aktivasyonu</h1>
+			</header><!-- /header -->
+			<div role="main" class="ui-content">
+				<form id="form-activation">
+					<div class="form-line">
+						<label for="input-act-email">Email:</label>
+						<input type="email" data-clear-btn="true" name="input-act-email" id="input-act-email" value="a@b.com" />
+					</div>
+					<div class="form-line">
+						<label for="input-act-pass">Pass:</label>
+						<input type="password" data-clear-btn="true" name="input-act-pass" id="input-act-pass" value="123" />
+					</div>
+					<div class="form-line">
+						<label for="input-act-token">Activate<br>Token:</label>
+						<input type="text" data-clear-btn="true" name="input-act-token" id="input-act-token" value="<?=$activationToken?>" />
+					</div>
+					<button class="ui-btn" id="button-activation">Activate</button>
+				</form>
+			</div><!-- /content -->
+			<footer data-role="footer">
+					<a href="mailto:alhanozdemir@gmail.com" data-mini="true">contact me</a>
+			</footer><!-- /footer -->
+	
+	</div>
 	<div data-role="page" id="register" class="page">
 			<header data-role="header">
 					<h1>Kullanıcı Kayıt</h1>
@@ -69,7 +98,7 @@
 				</form>
 			</div><!-- /content -->
 			<footer data-role="footer">
-					<a href="mailto:alhanozdemir@gmail.com" data-mini="true">alhanozdemir@gmail.com</a>
+					<a href="mailto:alhanozdemir@gmail.com" data-mini="true">contact me</a>
 					<a href="#login" data-mini="true">Giriş Yapın</a>
 			</footer><!-- /footer -->
 	
@@ -102,7 +131,7 @@
 			</div><!-- /content -->
 			
 			<footer data-role="footer">
-					<a href="mailto:alhanozdemir@gmail.com" data-mini="true">alhanozdemir@gmail.com</a>
+					<a href="mailto:alhanozdemir@gmail.com" data-mini="true">contact me</a>
 					<button id="list-update" style="display:none;">Güncelle</button>
 			</footer><!-- /footer -->
 			
